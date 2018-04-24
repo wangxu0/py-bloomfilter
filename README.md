@@ -17,8 +17,8 @@ print(bloomfilter.contains('456'))
 ```
 Test result:
 ```
-True</br>
-False</br>
+True
+False
 ```
 
 ## RedisBitSet
@@ -35,8 +35,8 @@ print(bloomfilter2.contains('456'))
 ```
 Test result:
 ```
-True</br>
-False</br>
+True
+False
 ```
 
 ## Extension
@@ -48,6 +48,6 @@ Welcome to submit your extension code or put any question issues on github.</br>
 # License
 
 py-bloomfilter is released under the [GNU Lesser General Public License v3.0](http://www.gnu.org/licenses/).
-You may copy this code directly into your project if you leave the LGPL-comment in place and reference the following hyperlink:
+You may copy this code directly into your project if you leave the LGPL-comment in place and reference the following hyperlink:</br>
 https://github.com/wxisme/py-bloomfilter
 
