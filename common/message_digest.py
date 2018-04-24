@@ -1,26 +1,22 @@
 # -*- encoding: utf-8 -*-
 
 import hashlib
-import threading
 
 
 class MessageDigestUtils(object):
-    __md5 = hashlib.md5()
     __charset = "utf-8"
-    __lock = threading.Lock()
 
     @classmethod
     def create_hashes(cls, data, hashes):
+        md5 = hashlib.md5()
         result = [0] * hashes
         k = 0
         salt = 0
         while k < hashes:
-            cls.__lock.acquire()
-            cls.__md5.update(str(salt).encode(cls.__charset))
-            cls.__md5.update(data)
+            md5.update(str(salt).encode(cls.__charset))
+            md5.update(data)
             salt += 1
-            digest = bytearray(cls.__md5.hexdigest())
-            cls.__lock.release()
+            digest = bytearray(md5.hexdigest())
 
             i = 0
             while i < len(digest) / 4 and k < hashes:
