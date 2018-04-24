@@ -42,7 +42,7 @@ False
 ## Extension
 
 In addition, you can extend any data structure you want to use.</br>
-All you need to do is inherit the function of BaseBitSet and override it.</br>
+All you need to do is inherit the function of `BaseBitSet` and override it.</br>
 Welcome to submit your extension code or put any question issues on github.</br>
 
 # License
